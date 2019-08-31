@@ -5,6 +5,8 @@ var urlsToCache = [
     '/src/css/main.css',
     '/src/img/me.jpg',
     '/src/img/icons/devpost.svg',
+    '/src/img/icons/github.svg',
+    '/src/img/icons/linkedin.svg',
 ];
 
 self.addEventListener('install', function (e) {

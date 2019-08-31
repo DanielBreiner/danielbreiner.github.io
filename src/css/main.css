@@ -102,9 +102,10 @@ hr.gray {
     position: relative;
     display: table-cell;
     vertical-align: middle;
+    z-index: 1;
     width: 60px;
     height: 60px;
-    background-color: #fff;
+    background-color: #ebebeb;
     color: black;
     text-align: center;
     transform: perspective(100px) rotate(-45deg) skew(10deg, 10deg) translate(0,0);
@@ -116,10 +117,10 @@ hr.gray {
     content: "";
     position: absolute;
     top: 10px;
-    left: -20px;
+    left: -21px;
     height: 100%;
-    width: 20px;
-    background: #b1b1b1;
+    width: 21px;
+    background: #c4c4c4;
     transition: .5s;
     transform: rotate(0deg) skewY(-45deg);
 }
@@ -131,7 +132,7 @@ hr.gray {
     left: -11px;
     height: 20px;
     width: 100%;
-    background: #b1b1b1;
+    background: #dddddd;
     transition: .5s;
     transform: rotate(0deg) skewX(-45deg);
 }
@@ -146,13 +147,13 @@ hr.gray {
 }
 
 #social ul li:hover.linkedin a{
-    background: #0077B5;
+    background: #0d82bf;
 }
 #social ul li:hover.linkedin a:before{
     background: #036aa0;
 }
 #social ul li:hover.linkedin a:after{
-    background: #0d82bf;
+    background: #0077B5;
 }
 
 
@@ -165,21 +166,21 @@ hr.gray {
 }
 
 #social ul li:hover.devpost a{
-    background: #003e54;
+    background: #014963;
 }
 #social ul li:hover.devpost a:before{
     background: #003649;
 }
 #social ul li:hover.devpost a:after{
-    background: #014963;
+    background: #003e54;
 }
 
 #social ul li:hover.github a{
-    background: #24292e;
+    background: #30373f;
 }
 #social ul li:hover.github a:before{
     background: #1a1e22;
 }
 #social ul li:hover.github a:after{
-    background: #30373f;
+    background: #24292e;
 }
