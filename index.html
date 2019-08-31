@@ -93,21 +93,17 @@
             <form class="mb-5">
                 <div class="row mb-4">
                     <div class="col">
-                        <label for="name">Name
-                            <input disabled class="form-control" type="text" name="name" required aria-label="name">
-                        </label>
+                        <label for="name">Name</label>
+                        <input disabled class="form-control" type="text" name="name" required aria-label="name">
                     </div>
                     <div class="col">
-                        <label for="email">Email
-                            <input disabled class="form-control" type="email" name="email" required aria-label="email">
-                        </label>
+                        <label for="email">Email</label>
+                        <input disabled class="form-control" type="email" name="email" required aria-label="email">
                     </div>
                 </div>
-                <label for="message" class="d-none">Message...
-                    <textarea disabled class="form-control mb-4" name="message" onfocus="this.value = '';"
-                        onblur="if (this.value == '') {this.value = 'Message...';}" required
-                        aria-label="message">Message...</textarea>
-                </label>
+                <textarea disabled class="form-control mb-4" name="message" onfocus="this.value = '';"
+                    onblur="if (this.value == '') {this.value = 'Message...';}" required
+                    aria-label="message">Message...</textarea>
                 <button disabled class="btn btn-light" type="submit">Send Message</button>
             </form>
             <span id="social">
