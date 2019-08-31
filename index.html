@@ -32,6 +32,10 @@
         content="Personal website of a computer science student, a programming enthusiast. Information about me, my past projects and my social media.">
     <meta property="twitter:image" content="http://danielbreiner.net/src/img/moneasy_logo.png">
     <link rel="stylesheet" href="src/css/main.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.10.2/css/all.css"
+        integrity="sha384-rtJEYb85SiYWgfpCr0jn174XgJTn4rptSOQsMroFBPQSGLdOC5IbubP6lJ35qoM9" crossorigin="anonymous">
 </head>
 
 <body>
@@ -40,75 +44,79 @@
             style="display:none;visibility:hidden"></iframe></noscript>
     <!-- End Google Tag Manager (noscript) -->
 
-    <ul id="menu">
-        <li><a href="">Home</a></li>
-        <li><a href="">About me</a></li>
-        <li><a href="">My education</a></li>
-        <li><a href="">My experience</a></li>
-        <li><a href="">My work</a></li>
-        <li><a href="">Contact</a></li>
+    <ul id="menu" class="mb-4">
+        <li><a href="#menu">Home</a></li>
+        <li><a href="#about">About me</a></li>
+        <li><a href="#">My education</a></li>
+        <li><a href="#">My experience</a></li>
+        <li><a href="#">My work</a></li>
+        <li><a href="#footer">Contact</a></li>
     </ul>
 
-    <div id="intro">
-        <div class="one-third">
-            <img src="src/img/me.jpg" alt="Daniel Breiner">
+    <div id="intro" class="container-fluid py-4 row">
+        <div class="col-4">
+            <img src="src/img/me.jpg" alt="Daniel Breiner" class="p-3">
         </div>
-        <div class="two-thirds">
-            <div>
-                <h1>Hi. I'm <b>Daniel Breiner</b></h1>
-                <h3>Student of Computer Science. Programmer.</h3>
-                <button>Learn more about me</button>
+        <div class="col mb-5">
+            <div class="ml-5">
+                <h1 class="mb-3 display-4">Hi. I'm <b>Daniel Breiner</b></h1>
+                <h3 class="mb-4">Student of Computer Science. Programmer.</h3>
+                <a href="#about" class="btn btn-dark text-light">Learn more about me</a>
             </div>
         </div>
     </div>
 
-    <div id="about">
-        <h2>About me</h2>
-        <p>This site - my personal porfolio - is under construction</p>
+    <div id="about" class="bg-light">
+        <div class="container py-5">
+            <h2>About me</h2>
+            <p>This site - my personal porfolio - is under construction</p>
+        </div>
     </div>
 
-    <div id="footer">
-        <span id="social">
-            <ul>
-                <li><a href="https://www.linkedin.com/in/daniel-breiner/" target="_blank" rel="noopener noreferrer"
-                        title="https://www.linkedin.com/in/daniel-breiner/">
-                        <img src="src/img/icons/linkedin.png" alt="LinkedIn">
-                    </a>
-                </li>
-                <li><a href="https://devpost.com/DanielBreiner" target="_blank" rel="noopener noreferrer"
-                        title="https://devpost.com/DanielBreiner">
-                        <img src="src/img/icons/devpost.png" alt="Devpost">
-                    </a>
-                </li>
-                <li>
-                    <a href="https://github.com/DanielBreiner" target="_blank" rel="noopener noreferrer"
-                        title="https://github.com/DanielBreiner">
-                        <img src="src/img/icons/github.png" alt="Github">
-                    </a>
-                </li>
-            </ul>
-        </span>
-        <span id="copyright">
-            <p>© 2019 Daniel Breiner</p>
-        </span>
+    <div id="footer" class="bg-dark text-light">
+        <div class="container">
+            <h3 class="text-center py-2 mb-4">Contact</h3>
+            <form class="mb-5">
+                <div class="row mb-4">
+                    <div class="col">
+                        <label for="name">Name</label>
+                        <input disabled class="form-control" type="text" name="name" required>
+                    </div>
+                    <div class="col">
+                        <label for="email">Email</label>
+                        <input disabled class="form-control" type="email" name="email" required>
+                    </div>
+                </div>
+                <textarea disabled class="form-control mb-4" name="message" onfocus="this.value = '';"
+                    onblur="if (this.value == '') {this.value = 'Message...';}" required="">Message...</textarea>
+                <button disabled class="btn btn-light" type="submit">Send Message</button>
+            </form>
+            <span id="social">
+                <ul class="py-4 mb-4">
+                    <li class="linkedin"><a href="https://www.linkedin.com/in/daniel-breiner/" target="_blank"
+                            rel="noopener noreferrer" title="https://www.linkedin.com/in/daniel-breiner/">
+                            <i class="fab fa-linkedin" aria-hidden="true"></i>
+                        </a>
+                    </li>
+                    <li class="devpost"><a href="https://devpost.com/DanielBreiner" target="_blank"
+                            rel="noopener noreferrer" title="https://devpost.com/DanielBreiner">
+                            <img src="src/img/icons/devpost.png" alt="Devpost">
+                        </a>
+                    </li>
+                    <li class="github">
+                        <a href="https://github.com/DanielBreiner" target="_blank" rel="noopener noreferrer"
+                            title="https://github.com/DanielBreiner">
+                            <i class="fab fa-github" aria-hidden="true"></i>
+                        </a>
+                    </li>
+                </ul>
+            </span>
+            <hr class="halfwidth gray mb-4">
+            <span id="copyright" class="text-light">
+                <p>© 2019 Daniel Breiner</p>
+            </span>
+        </div>
     </div>
-
-    <!-- <h1>Hello world!</h1>
-    <h3>This site - my personal porfolio - is under construction</h3>
-    <h4>In the meanwhile, you can find me on:</h4>
-    <ul>
-        <li><a href="https://www.linkedin.com/in/daniel-breiner/" target="_blank" rel="noopener noreferrer"
-                title="https://www.linkedin.com/in/daniel-breiner/">LinkedIn</a></li>
-        <br>
-        <li><a href="https://devpost.com/DanielBreiner" target="_blank" rel="noopener noreferrer"
-                title="https://devpost.com/DanielBreiner">Devpost</a></li>
-        <br>
-        <li><a href="https://github.com/DanielBreiner" target="_blank" rel="noopener noreferrer"
-                title="https://github.com/DanielBreiner">Github</a></li>
-    </ul>
-
-    <br>
-    <p>© 2019 Daniel Breiner</p> -->
 </body>
 
 </html>
