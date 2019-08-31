@@ -43,8 +43,8 @@
     <link rel="stylesheet" href="src/css/main.css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
         integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.10.2/css/all.css"
-        integrity="sha384-rtJEYb85SiYWgfpCr0jn174XgJTn4rptSOQsMroFBPQSGLdOC5IbubP6lJ35qoM9" crossorigin="anonymous">
+    <!-- <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.10.2/css/all.css"
+        integrity="sha384-rtJEYb85SiYWgfpCr0jn174XgJTn4rptSOQsMroFBPQSGLdOC5IbubP6lJ35qoM9" crossorigin="anonymous"> -->
 </head>
 
 <body class="text-dark">
@@ -59,7 +59,7 @@
                 <div class="col-lg col-sm-4 col-6 py-1"><a href="#menu">Home</a></div>
                 <div class="col-lg col-sm-4 col-6 py-1"><a href="#about">About me</a></div>
                 <div class="col-lg col-sm-4 col-6 py-1"><a href="#">My education</a></div>
-                <div class="col-lg col-sm-4 col-6 py-1"><a href="#">My experience</a></div>
+                <div class="col-lg col-sm-4 col-6 py-1"><a href="#experience">My experience</a></div>
                 <div class="col-lg col-sm-4 col-6 py-1"><a href="#">My work</a></div>
                 <div class="col-lg col-sm-4 col-6 py-1"><a href="#footer">Contact</a></div>
             </div>
@@ -82,10 +82,99 @@
         </div>
     </div>
 
-    <div id="about" class="bg-light">
+    <div id="about" class="bg-light boxsh-inset">
         <div class="container py-5">
-            <h2>About me</h2>
-            <p>This site - my personal porfolio - is under construction</p>
+            <h2 class="text-center">About me</h2>
+            <p class="text-center">This site - my personal porfolio - is under construction</p>
+        </div>
+    </div>
+
+    <div id="experience" class="bg-light boxsh-inset py-5">
+        <div class="container">
+            <h2 class="text-center py-2 mb-5">My experience</h2>
+            <div class="card-deck mb-5">
+                <div class="card mx-4">
+                    <img src="src/img/iontee.jpg" class="card-img-top border-bottom" alt="Moneasy"
+                        style="height: 235px; object-fit: cover;">
+                    <div class="card-body">
+                        <h5 class="card-title">Iontee</h5>
+                        <p class="card-text pb-3">President of "iontee" <br>- a Junior Achievement Students'
+                            Company.<br><br><a href="https://www.linkedin.com/in/daniel-breiner/"
+                                rel="noopener noreferrer" target="_blank">Read
+                                more on my
+                                LinkedIn...</a></p>
+                        <a href="https://iontee.jurajmarcin.com/" rel="noopener noreferrer" target="_blank"
+                            class="btn btn-outline-dark btn-block card-link">Website</a>
+
+                    </div>
+                    <ul class="list-group list-group-flush">
+                        <li class="list-group-item">Responsibility & leadership.</li>
+                        <li class="list-group-item">Advancement to the TOP Finals of JA Companies 2018</li>
+                    </ul>
+                    <div class="card-footer">
+                        <a href="https://www.jaslovensko.sk/" rel="noopener noreferrer" target="_blank"
+                            class="card-link">JA Slovakia</a>
+                        <a href="https://www.jaworldwide.org/" rel="noopener noreferrer" target="_blank"
+                            class="card-link">JA Worldwide</a>
+                        <br>
+                    </div>
+                </div>
+                <div class="card mx-4">
+                    <img src="src/img/moneasy_logo.png" class="card-img-top border-bottom" alt="Moneasy">
+                    <div class="card-body">
+                        <h5 class="card-title">Moneasy</h5>
+                        <p class="card-text pb-3">24h hackathon project for <a href="https://hackkosice.com/">Hack
+                                Kosice</a>. Kids focused spending report web app aimed to advise and improve financial
+                            literacy. Made to be playful.<br><br><a href="https://www.linkedin.com/in/daniel-breiner/"
+                                rel="noopener noreferrer" target="_blank">Read
+                                more on my
+                                LinkedIn...</a><br><a href="https://devpost.com/software/moneasy"
+                                rel="noopener noreferrer" target="_blank">Read
+                                more on Devpost...</a></p>
+
+                        <a href="http://moneasy.net/" rel="noopener noreferrer" target="_blank"
+                            class="btn btn-outline-dark btn-block card-link">Link</a>
+
+                    </div>
+                    <ul class="list-group list-group-flush">
+                        <li class="list-group-item">Node.js</li>
+                        <li class="list-group-item">Ajax - REST API</li>
+                        <li class="list-group-item">PostgreSQL</li>
+                    </ul>
+                    <div class="card-footer">
+                        <!-- <a href="https://devpost.com/software/moneasy" rel="noopener noreferrer" target="_blank"
+                            class="card-link">Devpost</a> -->
+                        <a href="https://github.com/DanielBreiner/moneasy" rel="noopener noreferrer" target="_blank"
+                            class="card-link">Github
+                            repository</a>
+                    </div>
+                </div>
+                <div class="card mx-4">
+                </div>
+            </div>
+            <div class="card-deck">
+                <div class="card mx-4">
+                    <img src="src/img/me512.png" class="card-img-top border-bottom" alt="Moneasy"
+                        style="height: 250px; object-fit: cover;">
+                    <div class="card-body">
+                        <h5 class="card-title">danielbreiner.net</h5>
+                        <p class="card-text">This website - my personal portfolio.</p>
+                    </div>
+                    <ul class="list-group list-group-flush">
+                        <li class="list-group-item">HTML & CSS</li>
+                        <li class="list-group-item">Bootstrap</li>
+                    </ul>
+                    <div class="card-footer">
+                        <a href="https://github.com/DanielBreiner/danielbreiner.github.io" target="_blank"
+                            rel="noopener noreferrer" class="card-link">Github
+                            repository</a>
+                    </div>
+                </div>
+                <div class="card mx-4">
+                </div>
+                <div class="card mx-4">
+                </div>
+            </div>
         </div>
     </div>
 
@@ -106,7 +195,10 @@
                 <textarea disabled class="form-control mb-4" name="message" onfocus="this.value = '';"
                     onblur="if (this.value == '') {this.value = 'Message...';}" required
                     aria-label="message">Message...</textarea>
-                <button disabled class="btn btn-light" type="submit">Send Message</button>
+                <button class="btn btn-light" type="submit">
+                    <span class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span>
+                    Send Message
+                </button>
             </form>
             <span id="social">
                 <ul class="py-4 mb-4">
@@ -130,7 +222,7 @@
                     </li>
                 </ul>
             </span>
-            <hr class="halfwidth gray mb-4">
+            <hr class="w-50 gray mb-4">
             <span id="copyright" class="text-light">
                 <p>© 2019 Daniel Breiner</p>
             </span>
@@ -143,10 +235,10 @@
         window.addEventListener('load', function () {
             navigator.serviceWorker.register('/sw.js').then(function (registration) {
                 // Registration was successful
-                console.log('ServiceWorker registration successful with scope: ', registration.scope);
+                // console.log('ServiceWorker registration successful with scope: ', registration.scope);
             }, function (err) {
                 // registration failed :(
-                console.log('ServiceWorker registration failed: ', err);
+                // console.log('ServiceWorker registration failed: ', err);
             });
         });
     }
