@@ -1,5 +1,5 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
-<html>
+<!DOCTYPE html>
+<html lang="en-us">
 
 <head>
     <!-- Google Tag Manager -->
@@ -14,6 +14,8 @@
     <!-- End Google Tag Manager -->
     <meta charset="utf-8">
     <title>Daniel Breiner</title>
+    <link rel="manifest" href="/manifest.json">
+    <link rel="shortcut icon" href="/favicon.ico">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- Meta tags -->
     <meta name="title" content="Daniel Breiner - personal portfolio website">
@@ -24,13 +26,18 @@
     <meta property="og:title" content="Daniel Breiner - personal porfolio website">
     <meta property="og:description"
         content="Personal website of a computer science student, a programming enthusiast. Information about me, my past projects and my social media.">
-    <meta property="og:image" content="http://danielbreiner.net/src/img/moneasy_logo.png">
+    <!-- <meta property="og:image" content="http://danielbreiner.net/src/img/moneasy_logo.png"> -->
     <meta property="twitter:card" content="summary_large_image">
     <meta property="twitter:url" content="http://danielbreiner.net/">
     <meta property="twitter:title" content="Daniel Breiner - personal portfolio website">
     <meta property="twitter:description"
         content="Personal website of a computer science student, a programming enthusiast. Information about me, my past projects and my social media.">
-    <meta property="twitter:image" content="http://danielbreiner.net/src/img/moneasy_logo.png">
+    <!-- <meta property="twitter:image" content="http://danielbreiner.net/src/img/moneasy_logo.png"> -->
+    <meta name="theme-color" content="#343a40">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="apple-mobile-web-app-title" content="Daniel Breiner">
+    <link rel="apple-touch-icon" href="/src/img/me192.png">
     <link rel="stylesheet" href="src/css/main.css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
         integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
@@ -38,24 +45,31 @@
         integrity="sha384-rtJEYb85SiYWgfpCr0jn174XgJTn4rptSOQsMroFBPQSGLdOC5IbubP6lJ35qoM9" crossorigin="anonymous">
 </head>
 
-<body>
+<body class="text-dark">
     <!-- Google Tag Manager (noscript) -->
     <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-5KSPDC7" height="0" width="0"
             style="display:none;visibility:hidden"></iframe></noscript>
     <!-- End Google Tag Manager (noscript) -->
 
-    <ul id="menu" class="mb-4">
-        <li><a href="#menu">Home</a></li>
-        <li><a href="#about">About me</a></li>
-        <li><a href="#">My education</a></li>
-        <li><a href="#">My experience</a></li>
-        <li><a href="#">My work</a></li>
-        <li><a href="#footer">Contact</a></li>
-    </ul>
+    <div id="menu" class="mb-4 bg-dark py-2">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg col-sm-4 col-6 py-1"><a href="#menu">Home</a></div>
+                <div class="col-lg col-sm-4 col-6 py-1"><a href="#about">About me</a></div>
+                <div class="col-lg col-sm-4 col-6 py-1"><a href="#">My education</a></div>
+                <div class="col-lg col-sm-4 col-6 py-1"><a href="#">My experience</a></div>
+                <div class="col-lg col-sm-4 col-6 py-1"><a href="#">My work</a></div>
+                <div class="col-lg col-sm-4 col-6 py-1"><a href="#footer">Contact</a></div>
+            </div>
+        </div>
+    </div>
 
     <div id="intro" class="container-fluid py-4 row">
-        <div class="col-4">
-            <img src="src/img/me.jpg" alt="Daniel Breiner" class="p-3">
+        <div class="col-12 d-inline-block d-md-none">
+            <img src="src/img/me.jpg" alt="Daniel Breiner" class="p-5 mt-n4">
+        </div>
+        <div class="col-4 d-none d-md-inline-block">
+            <img src="src/img/me.jpg" alt="Daniel Breiner" class="p-5 mt-n4">
         </div>
         <div class="col mb-5">
             <div class="ml-5">
@@ -79,33 +93,40 @@
             <form class="mb-5">
                 <div class="row mb-4">
                     <div class="col">
-                        <label for="name">Name</label>
-                        <input disabled class="form-control" type="text" name="name" required>
+                        <label for="name">Name
+                            <input disabled class="form-control" type="text" name="name" required aria-label="name">
+                        </label>
                     </div>
                     <div class="col">
-                        <label for="email">Email</label>
-                        <input disabled class="form-control" type="email" name="email" required>
+                        <label for="email">Email
+                            <input disabled class="form-control" type="email" name="email" required aria-label="email">
+                        </label>
                     </div>
                 </div>
-                <textarea disabled class="form-control mb-4" name="message" onfocus="this.value = '';"
-                    onblur="if (this.value == '') {this.value = 'Message...';}" required="">Message...</textarea>
+                <label for="message" class="d-none">Message...
+                    <textarea disabled class="form-control mb-4" name="message" onfocus="this.value = '';"
+                        onblur="if (this.value == '') {this.value = 'Message...';}" required
+                        aria-label="message">Message...</textarea>
+                </label>
                 <button disabled class="btn btn-light" type="submit">Send Message</button>
             </form>
             <span id="social">
                 <ul class="py-4 mb-4">
                     <li class="linkedin"><a href="https://www.linkedin.com/in/daniel-breiner/" target="_blank"
-                            rel="noopener noreferrer" title="https://www.linkedin.com/in/daniel-breiner/">
+                            rel="noopener noreferrer" title="https://www.linkedin.com/in/daniel-breiner/"
+                            aria-label="Check out my LinkedIn">
                             <i class="fab fa-linkedin" aria-hidden="true"></i>
                         </a>
                     </li>
                     <li class="devpost"><a href="https://devpost.com/DanielBreiner" target="_blank"
-                            rel="noopener noreferrer" title="https://devpost.com/DanielBreiner">
+                            rel="noopener noreferrer" title="https://devpost.com/DanielBreiner"
+                            aria-label="Check out my Devpost">
                             <img src="src/img/icons/devpost.png" alt="Devpost">
                         </a>
                     </li>
                     <li class="github">
                         <a href="https://github.com/DanielBreiner" target="_blank" rel="noopener noreferrer"
-                            title="https://github.com/DanielBreiner">
+                            title="https://github.com/DanielBreiner" aria-label="Check out my Github">
                             <i class="fab fa-github" aria-hidden="true"></i>
                         </a>
                     </li>
@@ -118,5 +139,18 @@
         </div>
     </div>
 </body>
+<script>
+    if ('serviceWorker' in navigator) {
+        window.addEventListener('load', function () {
+            navigator.serviceWorker.register('/sw.js').then(function (registration) {
+                // Registration was successful
+                console.log('ServiceWorker registration successful with scope: ', registration.scope);
+            }, function (err) {
+                // registration failed :(
+                console.log('ServiceWorker registration failed: ', err);
+            });
+        });
+    }
+</script>
 
 </html>

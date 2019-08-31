@@ -1,0 +1,27 @@
+{
+    "short_name": "Daniel Breiner",
+    "name": "Daniel Breiner - personal portfolio website",
+    "description": "Personal website of a computer science student, a programming enthusiast. Information about me, my past projects and my social media.",
+    "icons": [
+        {
+            "src": "/src/img/me512.png",
+            "type": "image/png",
+            "sizes": "512x512"
+        },
+        {
+            "src": "/src/img/me192.png",
+            "type": "image/png",
+            "sizes": "192x192"
+        },
+        {
+            "src": "/src/img/me96.png",
+            "type": "image/png",
+            "sizes": "96x96"
+        }
+    ],
+    "start_url": "/",
+    "background_color": "#343a40",
+    "display": "standalone",
+    "scope": "/",
+    "theme_color": "#343a40"
+}

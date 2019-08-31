@@ -31,17 +31,11 @@ hr.gray {
 
 #menu {
     width: 100%;
-    display:table;
     text-align: center;
-    background: rgb(34, 34, 34);
-    color: white;
-    padding: 1em;
-    margin: 0;
 }
 
 #menu li {
     display: inline-block;
-    padding: 0 1em;
 }
 
 #menu a {
@@ -60,12 +54,12 @@ hr.gray {
     display: inline-block;
 }
 
-#intro>div:first-child {
+#intro>div:nth-child(2) {
     text-align: right;
 }
 
-#intro>div:first-child img {
-    height: 180px;
+#intro img {
+    width: 250px;
     border-radius: 50%;
 }
 
