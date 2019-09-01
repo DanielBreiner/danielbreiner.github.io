@@ -256,17 +256,6 @@
         xhr.send(formToJSON(form));
     }
 
-    document.addEventListener("keydown", e => {
-        if (e.keyCode == 32) {
-            submitSpinner.classList.remove("spinner-border");
-            submitSpinner.classList.add("success");
-        }
-        if (e.keyCode == 123) {
-            submitSpinner.classList.add("spinner-border");
-            submitSpinner.classList.remove("success");
-        }
-    });
-
     function formToJSON(form) {
         var obj = {};
         var elements = form.querySelectorAll("input, select, textarea");
