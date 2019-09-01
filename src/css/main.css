@@ -115,10 +115,10 @@ hr.gray {
 #social ul li a::before {
     content: "";
     position: absolute;
-    top: 10px;
-    left: -21px;
+    top: 11px;
+    left: -22px;
     height: 100%;
-    width: 21px;
+    width: 22px;
     background: #c4c4c4;
     transition: .5s;
     transform: rotate(0deg) skewY(-45deg);
@@ -127,13 +127,24 @@ hr.gray {
 #social ul li a::after {
     content: "";
     position: absolute;
-    top: 60px;
+    top: 59px;
     left: -11px;
-    height: 20px;
+    height: 22px;
     width: 100%;
     background: #dddddd;
     transition: .5s;
     transform: rotate(0deg) skewX(-45deg);
+}
+
+#social ul li img {
+    z-index: 3;
+    width: 70%;
+    transform: translate3d(0,0,0);
+    -webkit-transform: translate3d(0,0,0);
+}
+
+#social ul li:hover img {
+    filter: invert(1);
 }
 
 #social ul li:hover a {
@@ -153,15 +164,6 @@ hr.gray {
 }
 #social ul li:hover.linkedin a:after{
     background: #0077B5;
-}
-
-
-#social ul li:hover img {
-    filter: invert(1);
-}
-
-#social ul li img {
-    width: 70%;
 }
 
 #social ul li:hover.devpost a{

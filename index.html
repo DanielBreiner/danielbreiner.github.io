@@ -313,7 +313,7 @@
 
     function formToJSON(form) {
         var obj = {};
-        var elements = form.querySelectorAll("input, select, textarea");
+        var elements = form.querySelectorAll("input, textarea");
         for (var i = 0; i < elements.length; ++i) {
             var element = elements[i];
             var name = element.name;
