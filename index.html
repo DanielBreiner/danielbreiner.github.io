@@ -98,11 +98,15 @@
                         style="height: 235px; object-fit: cover;">
                     <div class="card-body">
                         <h5 class="card-title">Iontee</h5>
-                        <p class="card-text pb-3">President of "iontee" <br>- a Junior Achievement Students'
-                            Company.<br><br><a href="https://www.linkedin.com/in/daniel-breiner/"
-                                rel="noopener noreferrer" target="_blank">Read
+                        <p class="card-text pb-3">President of "iontee"
+                            <br>- a Junior Achievement Students'
+                            Company.
+                            <br><br>
+                            <a href="https://www.linkedin.com/in/daniel-breiner/" rel="noopener noreferrer"
+                                target="_blank">Read
                                 more on my
-                                LinkedIn...</a></p>
+                                LinkedIn...</a>
+                        </p>
                         <a href="https://iontee.jurajmarcin.com/" rel="noopener noreferrer" target="_blank"
                             class="btn btn-outline-dark btn-block card-link">Website</a>
 
@@ -181,22 +185,22 @@
     <div id="footer" class="bg-dark text-light">
         <div class="container">
             <h3 class="text-center py-2 mb-4">Contact</h3>
-            <form class="mb-5">
+            <form id="contact" class="mb-5">
                 <div class="row mb-4">
                     <div class="col">
                         <label for="name">Name</label>
-                        <input disabled class="form-control" type="text" name="name" required aria-label="name">
+                        <input class="form-control" type="text" name="name" required aria-label="name">
                     </div>
                     <div class="col">
                         <label for="email">Email</label>
-                        <input disabled class="form-control" type="email" name="email" required aria-label="email">
+                        <input class="form-control" type="email" name="email" required aria-label="email">
                     </div>
                 </div>
-                <textarea disabled class="form-control mb-4" name="message" onfocus="this.value = '';"
+                <textarea class="form-control mb-4" name="message" onfocus="this.value = '';"
                     onblur="if (this.value == '') {this.value = 'Message...';}" required
                     aria-label="message">Message...</textarea>
                 <button class="btn btn-light" type="submit">
-                    <span class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span>
+                    <span id="submitSpinner" class="spinner-border-sm" role="status" aria-hidden="true"></span>
                     Send Message
                 </button>
             </form>
@@ -230,7 +234,63 @@
     </div>
 </body>
 
-<script>
+<script type="text/javascript">
+    const submitSpinner = document.getElementById("submitSpinner");
+    const form = document.getElementById("contact");
+    form.addEventListener("submit", onSubmit);
+
+    function onSubmit(e) {
+        e.preventDefault();
+        submitSpinner.classList.add("spinner-border");
+        let xhr = new XMLHttpRequest();
+        xhr.onreadystatechange = function () {
+            if (xhr.readyState == XMLHttpRequest.DONE) {
+                if (xhr.status == 200) {
+                    submitSpinner.classList.remove("spinner-border");
+                    submitSpinner.classList.add("success");
+                    form.reset();
+                }
+            }
+        }
+        xhr.open("POST", "https://mailer-danielbreiner-net.herokuapp.com/");
+        xhr.send(formToJSON(form));
+    }
+
+    document.addEventListener("keydown", e => {
+        if (e.keyCode == 32) {
+            submitSpinner.classList.remove("spinner-border");
+            submitSpinner.classList.add("success");
+        }
+        if (e.keyCode == 123) {
+            submitSpinner.classList.add("spinner-border");
+            submitSpinner.classList.remove("success");
+        }
+    });
+
+    function formToJSON(form) {
+        var obj = {};
+        var elements = form.querySelectorAll("input, select, textarea");
+        for (var i = 0; i < elements.length; ++i) {
+            var element = elements[i];
+            var name = element.name;
+            var value = element.value;
+
+            if (name) {
+                obj[name] = value;
+            }
+        }
+        obj["date"] = new Date();
+        obj["language"] = navigator.language;
+        obj["platform"] = navigator.platform;
+        obj["userAgent"] = navigator.userAgent;
+        obj["screenSize"] = screen.width + "x" + screen.height;
+        obj["windowSize"] = innerWidth + "x" + innerWidth;
+        return JSON.stringify(obj);
+    }
+
+</script>
+
+<script type="text/javascript">
     if ('serviceWorker' in navigator) {
         window.addEventListener('load', function () {
             navigator.serviceWorker.register('/sw.js').then(function (registration) {
