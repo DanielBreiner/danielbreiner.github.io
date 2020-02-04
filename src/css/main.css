@@ -1,5 +1,9 @@
 /* General */
 
+html {
+    scroll-behavior: smooth;
+}
+
 *, ::after, ::before {
     box-sizing: border-box;
 }
