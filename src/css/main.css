@@ -28,11 +28,10 @@ hr.gray {
     height: 0;
     padding: .5rem 0;
     overflow: hidden;
-    border-top: 1px solid rgba(0,0,0,.125);
+    border-top: 1px solid rgba(0, 0, 0, .125);
 }
 
-@media (min-width: 576px)
-{
+@media (min-width: 576px) {
     .card-deck {
         -ms-flex-direction: column !important;
         flex-direction: column !important;
@@ -75,7 +74,7 @@ hr.gray {
 
 /* Intro @ index.html */
 
-#intro>div  {
+#intro>div {
     display: inline-block;
 }
 
@@ -133,7 +132,7 @@ hr.gray {
     background-color: #ebebeb;
     color: black;
     text-align: center;
-    transform: perspective(100px) rotate(-45deg) skew(10deg, 10deg) translate(0,0);
+    transform: perspective(100px) rotate(-45deg) skew(10deg, 10deg) translate(0, 0);
     transition: .5s;
     box-shadow: -20px 20px 10px rgb(0, 0, 0, 0.5);
 }
@@ -165,8 +164,8 @@ hr.gray {
 #social ul li img {
     z-index: 3;
     width: 70%;
-    transform: translate3d(0,0,0);
-    -webkit-transform: translate3d(0,0,0);
+    transform: translate3d(0, 0, 0);
+    -webkit-transform: translate3d(0, 0, 0);
 }
 
 #social ul li:hover img {
@@ -182,40 +181,45 @@ hr.gray {
     color: white;
 }
 
-#social ul li:hover.linkedin a{
+#social ul li:hover.linkedin a {
     background: #0d82bf;
 }
-#social ul li:hover.linkedin a:before{
+
+#social ul li:hover.linkedin a:before {
     background: #036aa0;
 }
-#social ul li:hover.linkedin a:after{
+
+#social ul li:hover.linkedin a:after {
     background: #0077B5;
 }
 
-#social ul li:hover.devpost a{
+#social ul li:hover.devpost a {
     background: #014963;
 }
-#social ul li:hover.devpost a:before{
+
+#social ul li:hover.devpost a:before {
     background: #003649;
 }
-#social ul li:hover.devpost a:after{
+
+#social ul li:hover.devpost a:after {
     background: #003e54;
 }
 
-#social ul li:hover.github a{
+#social ul li:hover.github a {
     background: #30373f;
 }
-#social ul li:hover.github a:before{
+
+#social ul li:hover.github a:before {
     background: #1a1e22;
 }
-#social ul li:hover.github a:after{
+
+#social ul li:hover.github a:after {
     background: #24292e;
 }
 
 /* Contact */
 
-#submitSpinner.success,
-#submitSpinner.spinner-border {
+#submitSpinner.success, #submitSpinner.spinner-border {
     margin-right: 5px;
 }
 
