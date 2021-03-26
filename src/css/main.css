@@ -24,6 +24,16 @@ hr.gray {
     margin-bottom: 0.25rem;
 }
 
+.linkicon {
+    width: 1rem;
+    margin-bottom: 0.25rem;
+    transition: filter .15s ease-in-out
+}
+
+a:hover .linkicon {
+    filter: invert(1)
+}
+
 .divider {
     height: 0;
     padding: .5rem 0;
