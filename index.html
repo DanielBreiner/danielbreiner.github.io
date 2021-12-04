@@ -427,7 +427,7 @@
                 <p>You can also contact me on:<br>
                     <a href="mailto:contact@danielbreiner.eu" class="text-light">contact@danielbreiner.eu</a>
                 </p>
-                <p>© 2019-2021 Daniel Breiner</p>
+                <p>© <span id="copyright-date"></span> Daniel Breiner</p>
             </span>
         </div>
     </div>
@@ -635,32 +635,7 @@
                 });
             }
         );
-
-    // $('a.anchor-link').on('click', function (e) {
-    //     e.preventDefault();
-    //     var target = $($(this).attr('href')),
-    //         offset = 50,
-    //         p = $(target).offset().top - offset;
-    //     console.log("test");
-
-    //     $('body, html').animate({ 'scrollTop': p }, 250);
-    // });
-
 </script>
-
-<!-- <script type="text/javascript">
-    if ('serviceWorker' in navigator) {
-        window.addEventListener('load', function () {
-            navigator.serviceWorker.register('/sw.js').then(function (registration) {
-                // Registration was successful
-                // console.log('ServiceWorker registration successful with scope: ', registration.scope);
-            }, function (err) {
-                // registration failed :(
-                // console.log('ServiceWorker registration failed: ', err);
-            });
-        });
-    }
-</script> -->
 
 <link rel="stylesheet" href="src/css/micromodal.css">
 <script type="text/javascript" src="src/js/micromodal.min.js"></script>
@@ -680,6 +655,10 @@
             modals[i].children[0].style.top = "";
         }
     };
+</script>
+
+<script>
+    document.getElementById("copyright-date").innerHTML = `2019 - ${new Date().getFullYear()}`;
 </script>
 
 </html>
