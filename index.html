@@ -346,20 +346,6 @@
         }
         return JSON.stringify(obj);
     }
-
-    var offset = 80;
-    document
-        .querySelectorAll("a.anchor-link")
-        .forEach(
-            a => {
-                a.addEventListener("click", (e) => {
-                    e.preventDefault();
-                    var target = document.querySelector(a.getAttribute('href')),
-                        p = target.getBoundingClientRect().top + document.documentElement.scrollTop - offset;
-                    document.documentElement.scrollTop = p;
-                });
-            }
-        );
 </script>
 
 <link rel="stylesheet" href="src/css/micromodal.css">
