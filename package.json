@@ -1,0 +1,13 @@
+{
+	"name": "danielbreiner.github.io",
+	"version": "1.0.0",
+	"scripts": {
+		"generate": "npx tsx generate.tsx",
+		"dev": "python3 -m http.server & tsx watch --clear-screen=false generate.tsx"
+	},
+	"devDependencies": {
+		"@types/node": "^20.4.5",
+		"jsxte": "^3.0.0",
+		"tsx": "^3.12.7"
+	}
+}
