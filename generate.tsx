@@ -211,6 +211,8 @@ const cards: {
 			),
 			branch: "personal",
 			tag: "game dev",
+			image: "src/img/cards/chathuman.png",
+			imageStyle: "max-width: 400px; max-height: 300px",
 		},
 		{
 			title: "Comicraft",
@@ -667,7 +669,7 @@ const App = `
                 }
             }
         }
-        xhr.open("POST", "https://mailer.danielbreiner.eu/");
+        xhr.open("POST", "https://mailer.danielbreiner.eu/portfolio");
         xhr.send(formToJSON(form));
     }
 
@@ -713,6 +715,7 @@ function Card({
 	tag,
 	image,
 	subimage,
+	imageStyle,
 }: {
 	title: string;
 	place?: string;
@@ -722,6 +725,7 @@ function Card({
 	tag?: string;
 	image?: string;
 	subimage?: string;
+	imageStyle?: string;
 }) {
 	return (
 		<div class="card mb-3">
@@ -783,7 +787,7 @@ function Card({
 							src={image}
 							class="img-fluid "
 							alt="..."
-							style="max-height:100px;max-width: 200px;"
+							style={`max-height:100px;max-width: 200px;${imageStyle}`}
 						/>
 						<div>{subimage}</div>
 					</div>
