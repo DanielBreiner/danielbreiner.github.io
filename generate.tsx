@@ -140,7 +140,7 @@ const cards: {
 		{
 			title: "Web Support / Administrator / Automation Engineer",
 			place: "OneClick.Systems s.r.o.",
-			date: "10/2020 - 4/2021",
+			date: "5/2018 - 4/2020",
 			description: (
 				<div class="mb-3">
 					<ul class="mb-2">
@@ -170,6 +170,51 @@ const cards: {
 		},
 	],
 	projects: [
+		{
+			title: "Evershift",
+			date: "11/2023",
+			description: (
+				<div class="mb-3">
+					<ul class="mb-2">
+						<li>
+							An adventure game with a unique twist - you become
+							your enemies!
+						</li>
+						<li>
+							Winner of FIT CTU GameHack 2023 & Warhorse Studios
+							price winner.
+						</li>
+						<li>
+							Created in 48 hours with the themes "Mirrors",
+							"Curse", "Eclipse" and "New world".
+						</li>
+					</ul>
+					<p>
+						<a
+							href="https://itch.io/jam/gamehack-fit/rate/2375223"
+							class="link-dark"
+							target="_blank"
+						>
+							Jam entry
+						</a>
+					</p>
+					<p>
+						<a
+							href="https://mravenisko.itch.io/evershift"
+							target="_blank"
+							class="link-dark"
+						>
+							Play online
+						</a>
+					</p>
+				</div>
+			),
+			branch: "personal",
+			tag: "game dev",
+			image: "src/img/cards/evershift.png",
+			imageStyle: "max-width: 300px; max-height: 300px",
+			openableImage: true,
+		},
 		{
 			title: "ChatHuman",
 			date: "7/2023",
@@ -212,7 +257,8 @@ const cards: {
 			branch: "personal",
 			tag: "game dev",
 			image: "src/img/cards/chathuman.png",
-			imageStyle: "max-width: 400px; max-height: 300px",
+			imageStyle: "max-width: 300px; max-height: 300px",
+			openableImage: true,
 		},
 		{
 			title: "Comicraft",
@@ -243,6 +289,10 @@ const cards: {
 			),
 			branch: "personal",
 			tag: "web dev",
+			image: "src/img/cards/storiesy.jpg",
+			imageStyle:
+				"max-width: 300px; max-height: 300px; box-shadow: 0 0 5px 0 rgba(0,0,0,0.5)",
+			openableImage: true,
 		},
 		{
 			title: "Salaš Simulator VR",
@@ -281,6 +331,9 @@ const cards: {
 			),
 			branch: "school",
 			tag: "game dev",
+			image: "src/img/cards/salassimulator.jpg",
+			imageStyle: "max-width: 300px; max-height: 300px",
+			openableImage: true,
 		},
 		{
 			title: "Rhune",
@@ -320,6 +373,9 @@ const cards: {
 			),
 			branch: "personal",
 			tag: "game dev",
+			image: "src/img/cards/rhune.png",
+			imageStyle: "max-width: 300px; max-height: 300px",
+			openableImage: true,
 		},
 		{
 			title: "Voxel game engine",
@@ -349,6 +405,9 @@ const cards: {
 			),
 			branch: "school",
 			tag: "game dev",
+			image: "src/img/cards/voxelengine.png",
+			imageStyle: "max-width: 300px; max-height: 300px",
+			openableImage: true,
 		},
 		{
 			title: "Hatenot",
@@ -383,6 +442,9 @@ const cards: {
 			),
 			branch: "personal",
 			tag: "web dev",
+			image: "src/img/cards/hatenot.png",
+			imageStyle: "max-width: 300px; max-height: 300px",
+			openableImage: true,
 		},
 		{
 			title: "Old web portfolio",
@@ -435,6 +497,9 @@ const cards: {
 			),
 			branch: "personal",
 			tag: "game dev",
+			image: "src/img/cards/messyjessie.png",
+			imageStyle: "max-width: 300px; max-height: 300px",
+			openableImage: true,
 		},
 		{
 			title: "Spellguard",
@@ -466,6 +531,9 @@ const cards: {
 			),
 			branch: "school",
 			tag: "game dev",
+			image: "src/img/cards/spellguard.png",
+			imageStyle: "max-width: 300px; max-height: 300px",
+			openableImage: true,
 		},
 		{
 			title: "Moneasy",
@@ -716,6 +784,7 @@ function Card({
 	image,
 	subimage,
 	imageStyle,
+	openableImage,
 }: {
 	title: string;
 	place?: string;
@@ -726,69 +795,91 @@ function Card({
 	image?: string;
 	subimage?: string;
 	imageStyle?: string;
+	openableImage?: boolean;
 }) {
 	return (
 		<div class="card mb-3">
 			<div class="row g-4">
-				<div class="col-md-9">
-					<div class="card-body">
-						<h5 class="card-title fw-semibold">{title}</h5>
+				<div class="col-md-9 d-flex">
+					<div class="card-body d-flex flex-column justify-content-between">
+						<div>
+							<h5 class="card-title fw-semibold">{title}</h5>
 
-						<p class="card-text d-flex flex-column gap-2 mb-2 fw-medium">
-							{place}
-							<small class="text-body-secondary d-flex align-items-center gap-2">
-								{date}
-							</small>
-						</p>
-						<p class="card-text mb-2">{description}</p>
-						<p class="card-text d-flex gap-3">
-							{branch && (
+							<p class="card-text d-flex flex-column gap-2 mb-2 fw-medium">
+								{place}
 								<small class="text-body-secondary d-flex align-items-center gap-2">
-									<svg
-										// @ts-ignore
-										xmlns="http://www.w3.org/2000/svg"
-										height="20px"
-										viewBox="0 0 24 24"
-										width="20px"
-										fill="#000000"
-									>
-										{/* @ts-ignore */}
-										<path d="M0 0h24v24H0z" fill="none" />
-										{/* @ts-ignore */}
-										<path d="M10 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V8c0-1.1-.9-2-2-2h-8l-2-2z" />
-									</svg>{" "}
-									{branch}
+									{date}
 								</small>
-							)}
-							{tag && (
-								<small class="text-body-secondary d-flex align-items-center gap-2">
-									<svg
-										// @ts-ignore
-										xmlns="http://www.w3.org/2000/svg"
-										height="20px"
-										viewBox="0 0 24 24"
-										width="20px"
-										fill="#000000"
-									>
-										{/* @ts-ignore */}
-										<path d="M0 0h24v24H0z" fill="none" />
-										{/* @ts-ignore */}
-										<path d="m21.41 11.58-9-9C12.05 2.22 11.55 2 11 2H4c-1.1 0-2 .9-2 2v7c0 .55.22 1.05.59 1.42l9 9c.36.36.86.58 1.41.58.55 0 1.05-.22 1.41-.59l7-7c.37-.36.59-.86.59-1.41 0-.55-.23-1.06-.59-1.42zM5.5 7C4.67 7 4 6.33 4 5.5S4.67 4 5.5 4 7 4.67 7 5.5 6.33 7 5.5 7z" />
-									</svg>{" "}
-									{tag}
-								</small>
-							)}
-						</p>
+							</p>
+							<p class="card-text mb-2">{description}</p>
+						</div>
+						<div>
+							<p class="card-text d-flex gap-3">
+								{branch && (
+									<small class="text-body-secondary d-flex align-items-center gap-2">
+										<svg
+											// @ts-ignore
+											xmlns="http://www.w3.org/2000/svg"
+											height="20px"
+											viewBox="0 0 24 24"
+											width="20px"
+											fill="#000000"
+										>
+											{/* @ts-ignore */}
+											<path
+												d="M0 0h24v24H0z"
+												fill="none"
+											/>
+											{/* @ts-ignore */}
+											<path d="M10 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V8c0-1.1-.9-2-2-2h-8l-2-2z" />
+										</svg>{" "}
+										{branch}
+									</small>
+								)}
+								{tag && (
+									<small class="text-body-secondary d-flex align-items-center gap-2">
+										<svg
+											// @ts-ignore
+											xmlns="http://www.w3.org/2000/svg"
+											height="20px"
+											viewBox="0 0 24 24"
+											width="20px"
+											fill="#000000"
+										>
+											{/* @ts-ignore */}
+											<path
+												d="M0 0h24v24H0z"
+												fill="none"
+											/>
+											{/* @ts-ignore */}
+											<path d="m21.41 11.58-9-9C12.05 2.22 11.55 2 11 2H4c-1.1 0-2 .9-2 2v7c0 .55.22 1.05.59 1.42l9 9c.36.36.86.58 1.41.58.55 0 1.05-.22 1.41-.59l7-7c.37-.36.59-.86.59-1.41 0-.55-.23-1.06-.59-1.42zM5.5 7C4.67 7 4 6.33 4 5.5S4.67 4 5.5 4 7 4.67 7 5.5 6.33 7 5.5 7z" />
+										</svg>{" "}
+										{tag}
+									</small>
+								)}
+							</p>
+						</div>
 					</div>
 				</div>
 				{image && (
 					<div class="col-md-3 p-4 px-5 d-flex flex-column justify-content-between align-items-end">
-						<img
-							src={image}
-							class="img-fluid "
-							alt="..."
-							style={`max-height:100px;max-width: 200px;${imageStyle}`}
-						/>
+						{openableImage ? (
+							<a href={image} target="_blank">
+								<img
+									src={image}
+									class="img-fluid "
+									alt="..."
+									style={`max-height:100px;max-width: 200px;${imageStyle}`}
+								/>
+							</a>
+						) : (
+							<img
+								src={image}
+								class="img-fluid "
+								alt="..."
+								style={`max-height:100px;max-width: 200px;${imageStyle}`}
+							/>
+						)}
 						<div>{subimage}</div>
 					</div>
 				)}
