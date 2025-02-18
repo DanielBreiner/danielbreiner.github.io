@@ -8,39 +8,6 @@ const cards: {
 } = {
 	experience: [
 		{
-			title: "Student",
-			place: "Faculty of Information Technology, CTU in Prague",
-			date: "2019-2024",
-			description: (
-				<div class="mb-3">
-					<i>Master's degree</i>
-					<ul class="mb-2">
-						<li>
-							Study branch Software Engineering, specialization
-							Web Development.
-						</li>
-						<li>Merit scholarship.</li>
-					</ul>
-					<i>Bachelor's degree</i>
-					<ul>
-						<li>
-							Study branch Software Engineering, specialization
-							Computer Graphics.
-						</li>
-						<li>
-							Highest scholarship (weighted average [1.0,1.1]).
-						</li>
-						<li>
-							Top 1% in coding classes (Programming and
-							Algorithmics 1 & 2).
-						</li>
-					</ul>
-				</div>
-			),
-			branch: "school",
-			image: "src/img/cards/fit-cvut-logo-cs.svg",
-		},
-		{
 			title: "Frontend Developer",
 			place: "Recombee",
 			date: "5/2021 - present",
@@ -89,9 +56,42 @@ const cards: {
 			image: "src/img/cards/recombee-logo.svg",
 		},
 		{
+			title: "Student",
+			place: "Faculty of Information Technology, CTU in Prague",
+			date: "2019-2025",
+			description: (
+				<div class="mb-3">
+					<i>Master's degree</i>
+					<ul class="mb-2">
+						<li>
+							Study branch Software Engineering, specialization
+							Web Development.
+						</li>
+						<li>Merit scholarship.</li>
+					</ul>
+					<i>Bachelor's degree</i>
+					<ul>
+						<li>
+							Study branch Software Engineering, specialization
+							Computer Graphics.
+						</li>
+						<li>
+							Highest scholarship (weighted average [1.0,1.1]).
+						</li>
+						<li>
+							Top 1% in coding classes (Programming and
+							Algorithmics 1 & 2).
+						</li>
+					</ul>
+				</div>
+			),
+			branch: "school",
+			image: "src/img/cards/fit-cvut-logo-cs.svg",
+		},
+		{
 			title: "Teaching Assistant",
 			place: "Faculty of Information Technology, CTU in Prague",
-			date: "9/2022 - present",
+			date: "9/2022 - 2/2025",
 			description: (
 				<div class="mb-3">
 					<ul class="mb-2">
